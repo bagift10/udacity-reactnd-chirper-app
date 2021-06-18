@@ -22,6 +22,10 @@ class NewTweet extends Component {
     const { dispatch, id } = this.props;
 
     dispatch(handleAddTweet(text, id))
+    
+    this.setState(() => ({
+      text: ''
+    }));
   }
 
   render() {
